@@ -1,10 +1,16 @@
 import { Outlet } from "react-router-dom";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import './Layout.css'
 
 export default function Layout(){
     return(
-        <>
-           <h1>Hostel Booking Layout</h1>
-           <Outlet/>
-        </>
+        <div className="layout-container">
+           <Sidebar />
+           <main className="main-content">
+               <Header pageName="Dashboard" />
+               <Outlet/>
+           </main>
+        </div>
     );
 }
